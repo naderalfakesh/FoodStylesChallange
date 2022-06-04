@@ -4,4 +4,4 @@ export type GetResponse = { cards: Card[] };
 
 export type CreateResponse = { createCard: Card };
 
-export type DuplicateResponse = Card;
+export type DuplicateResponse = { duplicateCard: Card };

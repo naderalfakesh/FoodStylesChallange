@@ -4,50 +4,49 @@ import BlurryModal from '../../../components/BluryModal';
 import FoodCard from '../../../components/FoodCard';
 import ActionButton from '../../../components/ActionButton';
 import styles from './CardOptionsModal.styles';
-import { Card } from '../../../models/card';
+import LoadingState from '../../../components/LoadingState';
 
 const shareIcon = require('../../../../assets/icons/share.png');
 const duplicateIcon = require('../../../../assets/icons/duplicate.png');
 const deleteIcon = require('../../../../assets/icons/delete.png');
 
 interface Props {
-  item: Card;
+  cardName: string;
   visible: boolean;
   onClose: () => void;
-  onShare: (item: Card) => void;
-  onDuplicate: (item: Card) => void;
-  onDelete: (item: Card) => void;
+  onShare: () => void;
+  onDuplicate: () => void;
+  onDelete: () => void;
+  loading: boolean;
 }
 const CardOptionsModal = ({
-  item,
+  cardName,
   visible,
   onClose,
   onShare,
   onDuplicate,
   onDelete,
+  loading,
 }: Props) => {
   return (
     <BlurryModal visible={visible} onClose={onClose}>
-      <FoodCard title="Nader" type="close" onOptionsPress={onClose} />
+      <FoodCard title={cardName} type="close" onOptionsPress={onClose} />
       <View style={styles.buttonsContainer}>
         <ActionButton
           style={styles.button}
           text="Share"
           image={shareIcon}
-          onPress={() => onShare(item)}
+          onPress={onShare}
         />
         <ActionButton
           style={styles.button}
           text="Duplicate"
           image={duplicateIcon}
-          onPress={() => onDuplicate(item)}
+          onPress={onDuplicate}
         />
-        <ActionButton
-          text="Delete"
-          image={deleteIcon}
-          onPress={() => onDelete(item)}
-        />
+        <ActionButton text="Delete" image={deleteIcon} onPress={onDelete} />
       </View>
+      {loading ? <LoadingState /> : null}
     </BlurryModal>
   );
 };

@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
     letterSpacing: 0,
     color: theme.colors.GREYISH_BROWN,
+    flex: 1,
   },
   optionsContainer: {
     width: ICON_SIZE,

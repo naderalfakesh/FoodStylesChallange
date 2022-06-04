@@ -11,9 +11,17 @@ const cardsSlice = createSlice({
   reducers: {
     addCard: (state, action: PayloadAction<Card>) => {
       if (state.list) {
-        state.list?.push(action.payload);
+        state.list.push(action.payload);
       } else {
         state.list = [action.payload];
+      }
+    },
+    deleteCard: (state, action: PayloadAction<{ id: string }>) => {
+      if (state.list) {
+        const cardIndex = state.list.findIndex(
+          item => item.id === action.payload.id,
+        );
+        state.list.splice(cardIndex, 1);
       }
     },
   },
@@ -35,6 +43,6 @@ const cardsSlice = createSlice({
 
 const { reducer, actions } = cardsSlice;
 
-export const { addCard } = actions;
+export const { addCard, deleteCard } = actions;
 
 export { reducer as cardsReducer };

@@ -32,6 +32,7 @@ const CardListScreen = ({ style, list, loading, onOptionsPress }: Props) => {
       ListEmptyComponent={() => (
         <EmptyState message="There are no food cards yet!" />
       )}
+      keyExtractor={item => item.id}
     />
   );
 };

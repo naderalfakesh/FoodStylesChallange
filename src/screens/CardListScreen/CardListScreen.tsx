@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image } from 'react-native';
+import { Alert, Image } from 'react-native';
 
 import { Screen } from '../../components';
 import ErrorState from '../../components/ErrorState';
@@ -12,9 +12,51 @@ import Footer from './Footer';
 
 const logo = require('../../../assets/icons/logo.png');
 
+type Action = 'share' | 'duplicate' | 'delete';
+
 const CardListScreen = () => {
-  const { list, loading, error, addCard, adding } = useCardList();
+  const {
+    list,
+    loading,
+    error,
+    addCard,
+    actionLoading,
+    duplicateCard,
+    deleteCard,
+  } = useCardList();
+
   const [selectedItem, setSelectedItem] = useState<Card | null>(null);
+
+  const handleActions = async (action: Action) => {
+    if (!selectedItem) {
+      return;
+    }
+    try {
+      switch (action) {
+        case 'duplicate':
+          await duplicateCard(selectedItem.id);
+          setSelectedItem(null);
+          break;
+        case 'delete':
+          Alert.alert(
+            'Confirm delete',
+            'This will delete the Food Style and all its settings.',
+            [
+              {
+                text: 'Delete',
+                style: 'destructive',
+                onPress: async () => {
+                  await deleteCard(selectedItem.id);
+                  setSelectedItem(null);
+                },
+              },
+              { text: 'Cancel' },
+            ],
+          );
+          break;
+      }
+    } catch (err) {}
+  };
   return (
     <Screen>
       <Image style={styles.logo} source={logo} />
@@ -27,15 +69,16 @@ const CardListScreen = () => {
           onOptionsPress={item => setSelectedItem(item)}
         />
       )}
-      <Footer onAddCardPress={() => addCard()} loading={adding} />
+      <Footer onAddCardPress={() => addCard()} loading={actionLoading} />
       {selectedItem ? (
         <CardOptionsModal
-          item={selectedItem}
+          cardName={selectedItem.name}
           visible={!!selectedItem}
           onClose={() => setSelectedItem(null)}
-          onShare={() => console.log(1)}
-          onDuplicate={() => console.log(2)}
-          onDelete={() => console.log(3)}
+          onShare={() => handleActions('share')}
+          onDuplicate={() => handleActions('duplicate')}
+          onDelete={() => handleActions('delete')}
+          loading={actionLoading}
         />
       ) : null}
     </Screen>

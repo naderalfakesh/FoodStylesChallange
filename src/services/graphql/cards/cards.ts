@@ -23,14 +23,16 @@ const share = () =>
     mutation: SHARE_CARD,
   });
 
-const duplicate = () =>
+const duplicate = (id: string) =>
   client.mutate<DuplicateResponse>({
     mutation: DUPLICATE_CARD,
+    variables: { id },
   });
 
-const remove = () =>
+const remove = (id: string) =>
   client.mutate<void>({
     mutation: DELETE_CARD,
+    variables: { id },
   });
 
 export { get, create, share, duplicate, remove as delete };

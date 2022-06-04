@@ -22,21 +22,21 @@ export const CREAT_CARD = gql`
 `;
 
 export const SHARE_CARD = gql`
-  mutation {
-    shareCard(id: 1)
+  mutation shareCard($id: ID!) {
+    shareCard(id: $id)
   }
 `;
 
 export const DUPLICATE_CARD = gql`
-  mutation {
-    duplicateCard(id: 1) {
+  mutation duplicateCard($id: ID!) {
+    duplicateCard(id: $id) {
       id
       name
     }
   }
 `;
 export const DELETE_CARD = gql`
-  mutation {
-    deleteCard(id: 1)
+  mutation deleteCard($id: ID!) {
+    deleteCard(id: $id)
   }
 `;
