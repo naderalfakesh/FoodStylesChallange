@@ -53,10 +53,10 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ProximaNovaAlt-Bold.ttf</string>
-		<string>ProximaNovaAlt-Regular.ttf</string>
-		<string>ProximaNovaAlt-Semibold.ttf</string>
-		<string>ProximaNovaAltCond-Semibold.ttf</string>
+		<string>ProximaNovaA-Bold.ttf</string>
+		<string>ProximaNovaA-Regular.ttf</string>
+		<string>ProximaNovaA-Semibold.ttf</string>
+		<string>ProximaNovaACond-Semibold.ttf</string>
 	</array>
 </dict>
 </plist>
