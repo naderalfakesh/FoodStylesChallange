@@ -1,14 +1,16 @@
 import React from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { Image } from 'react-native';
 
 import { Screen } from '../../components';
+import { styles } from './CardListScreen.styles';
 
 const CardListScreen = () => {
   return (
     <Screen>
-      <SafeAreaView>
-        <Text>CardListScreen</Text>
-      </SafeAreaView>
+      <Image
+        style={styles.logo}
+        source={require('../../../assets/icons/logo.png')}
+      />
     </Screen>
   );
 };
