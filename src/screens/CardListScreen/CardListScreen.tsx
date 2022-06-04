@@ -2,26 +2,28 @@ import React from 'react';
 import { Image } from 'react-native';
 
 import { Screen } from '../../components';
+import ErrorState from '../../components/ErrorState';
+import useCardList from '../../hooks/useCards';
 import CardList from './CardList';
 import { styles } from './CardListScreen.styles';
-const data = [
-  { id: '1', name: 'Nader' },
-  { id: '2', name: 'Nader' },
-  {
-    id: '3',
-    name: 'reiciendis, deserunt atque omnis officia, temporibus in delectus?',
-  },
-  { id: '4', name: 'Nader' },
-];
 
 const CardListScreen = () => {
+  const { list, loading, error } = useCardList();
   return (
     <Screen>
       <Image
         style={styles.logo}
         source={require('../../../assets/icons/logo.png')}
       />
-      <CardList list={data} onOptionsPress={item => console.log(item.id)} />
+      {!list && !error ? (
+        <ErrorState message={error.message} />
+      ) : (
+        <CardList
+          list={list || []}
+          loading={loading}
+          onOptionsPress={item => console.log(item.id)}
+        />
+      )}
     </Screen>
   );
 };
