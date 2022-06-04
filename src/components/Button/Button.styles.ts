@@ -1,18 +1,15 @@
 import { StyleSheet } from 'react-native';
 import theme from '../../theme';
 
-const ICON_SIZE = 24;
-
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
-    paddingLeft: 18,
-    paddingTop: 18,
-    paddingRight: 15,
-    paddingBottom: 14,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    backgroundColor: theme.colors.WHITE,
+    height: 46,
+    marginHorizontal: 18,
+    paddingHorizontal: 15,
     borderRadius: 6,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: theme.colors.WHITE,
     shadowColor: theme.colors.GREYISH_40,
     shadowOffset: {
       width: 0,
@@ -22,19 +19,28 @@ export const styles = StyleSheet.create({
     shadowOpacity: 1,
     elevation: 5, // estimation for android
   },
-  title: {
+  pressed: {
+    backgroundColor: theme.colors.SECONDARY_BUTTON_BACKGROUND,
+  },
+  disabled: {
+    backgroundColor: theme.colors.GREYISH_40,
+  },
+  text: {
     fontFamily: 'ProximaNovaA-Bold',
     fontSize: 18,
+    fontWeight: 'bold',
     fontStyle: 'normal',
-    lineHeight: 22,
     letterSpacing: 0,
     color: theme.colors.GREYISH_BROWN,
   },
-  optionsContainer: {
-    width: ICON_SIZE,
-    height: ICON_SIZE,
-    borderRadius: ICON_SIZE / 2,
+  image: {
+    width: 20,
+    height: 20,
+    marginRight: 10,
   },
-  pressed: { backgroundColor: theme.colors.SECONDARY_BUTTON_BACKGROUND },
-  options: { width: ICON_SIZE, height: ICON_SIZE },
+  loading: {
+    marginRight: 10,
+  },
 });
+
+export default styles;

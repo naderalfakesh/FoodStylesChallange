@@ -6,6 +6,7 @@ import ErrorState from '../../components/ErrorState';
 import useCardList from '../../hooks/useCards';
 import CardList from './CardList';
 import { styles } from './CardListScreen.styles';
+import Footer from './Footer';
 
 const CardListScreen = () => {
   const { list, loading, error } = useCardList();
@@ -15,7 +16,7 @@ const CardListScreen = () => {
         style={styles.logo}
         source={require('../../../assets/icons/logo.png')}
       />
-      {!list && !error ? (
+      {!list && error ? (
         <ErrorState message={error.message} />
       ) : (
         <CardList
@@ -24,6 +25,7 @@ const CardListScreen = () => {
           onOptionsPress={item => console.log(item.id)}
         />
       )}
+      <Footer onAddCardPress={() => console.log('create')} />
     </Screen>
   );
 };
