@@ -359,8 +359,6 @@ PODS:
     - React-perflogger (= 0.68.2)
   - RNShare (7.5.0):
     - React-Core
-  - SajjadBlurOverlay (1.0.0):
-    - React
   - SocketRocket (0.6.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -425,7 +423,6 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNShare (from `../node_modules/react-native-share`)
-  - SajjadBlurOverlay (from `../node_modules/react-native-blur-overlay/ios`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -515,8 +512,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNShare:
     :path: "../node_modules/react-native-share"
-  SajjadBlurOverlay:
-    :path: "../node_modules/react-native-blur-overlay/ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -568,7 +563,6 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: b960b687d2dfef0d3761fbb187e01812ebab8b23
   ReactCommon: 095366164a276d91ea704ce53cb03825c487a3f2
   RNShare: 2e8e9dadea058057642a9351ca2878867ad4ad5c
-  SajjadBlurOverlay: 4366a3417954b7d4a8a70682e0c43959ff76a3cb
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
