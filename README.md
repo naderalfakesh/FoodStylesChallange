@@ -3,5 +3,5 @@
 #### How to start the app:
 
 1. Clone this repo.
-2. Run yarn install one time (it will run bundle install and pod install for you automatically).
+2. Run yarn install one time (it will run bundle install, pod install and package-patch for you automatically).
 3. If everything goes then ok you can run on ios with yarn ios , run on android with yarn android
