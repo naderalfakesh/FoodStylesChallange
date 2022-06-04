@@ -6,9 +6,10 @@ import Button from '../../../components/Button';
 
 interface Props {
   style?: ViewProps['style'];
+  loading: boolean;
   onAddCardPress: () => void;
 }
-const Footer = ({ style, onAddCardPress }: Props) => {
+const Footer = ({ style, onAddCardPress, loading }: Props) => {
   const { bottom } = useSafeAreaInsets();
   return (
     <View style={[styles.container, style, { height: FOOTER_HEIGHT + bottom }]}>
@@ -17,6 +18,7 @@ const Footer = ({ style, onAddCardPress }: Props) => {
         text="New Food Style"
         image={require('../../../../assets/icons/add.png')}
         onPress={onAddCardPress}
+        loading={loading}
       />
     </View>
   );

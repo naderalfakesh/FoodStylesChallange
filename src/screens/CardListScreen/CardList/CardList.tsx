@@ -19,6 +19,7 @@ const CardListScreen = ({ style, list, loading, onOptionsPress }: Props) => {
   ) : (
     <FlatList
       style={styles.list}
+      showsVerticalScrollIndicator={false}
       contentContainerStyle={[styles.container, style]}
       data={list}
       renderItem={({ item }) => (

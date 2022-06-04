@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Card } from '../../../models/card';
 import { getCardsThunk } from './cards.thunks';
 import { InitialState } from './cards.types';
 
@@ -7,7 +8,15 @@ const initialState: InitialState = { loading: false };
 const cardsSlice = createSlice({
   name: 'cards',
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    addCard: (state, action: PayloadAction<Card>) => {
+      if (state.list) {
+        state.list?.push(action.payload);
+      } else {
+        state.list = [action.payload];
+      }
+    },
+  },
   extraReducers: builder => {
     builder
       .addCase(getCardsThunk.pending, state => {
@@ -24,6 +33,8 @@ const cardsSlice = createSlice({
   },
 });
 
-const { reducer } = cardsSlice;
+const { reducer, actions } = cardsSlice;
+
+export const { addCard } = actions;
 
 export { reducer as cardsReducer };

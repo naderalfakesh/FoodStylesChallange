@@ -9,7 +9,8 @@ import { styles } from './CardListScreen.styles';
 import Footer from './Footer';
 
 const CardListScreen = () => {
-  const { list, loading, error } = useCardList();
+  const { list, loading, error, addCard, adding } = useCardList();
+
   return (
     <Screen>
       <Image
@@ -25,7 +26,7 @@ const CardListScreen = () => {
           onOptionsPress={item => console.log(item.id)}
         />
       )}
-      <Footer onAddCardPress={() => console.log('create')} />
+      <Footer onAddCardPress={() => addCard()} loading={adding} />
     </Screen>
   );
 };
