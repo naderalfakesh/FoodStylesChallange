@@ -1,6 +1,7 @@
-import { View, Text, ViewProps } from 'react-native';
+import { View, ViewProps } from 'react-native';
 import React from 'react';
 import styles from './ErrorState.styles';
+import Text from '../Text';
 
 interface Props {
   style?: ViewProps['style'];
@@ -9,7 +10,9 @@ interface Props {
 const ErrorState = ({ style, message = 'Unknown error!' }: Props) => {
   return (
     <View style={[styles.container, style]}>
-      <Text style={styles.message}>{message}</Text>
+      <Text color="primary" preset="bold-18-22" style={styles.message}>
+        {message}
+      </Text>
     </View>
   );
 };

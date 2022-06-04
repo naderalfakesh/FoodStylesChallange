@@ -1,5 +1,4 @@
 import {
-  Text,
   ViewProps,
   Pressable,
   Image,
@@ -9,6 +8,7 @@ import {
 import React from 'react';
 import styles from './Button.styles';
 import theme from '../../theme';
+import Text from '../Text';
 
 interface Props {
   style?: ViewProps['style'];
@@ -37,7 +37,9 @@ const Button = ({ style, text, image, onPress, loading = false }: Props) => {
       ) : image ? (
         <Image source={image} style={styles.image} />
       ) : null}
-      <Text style={styles.text}>{text}</Text>
+      <Text color="primary" preset="bold-18-22">
+        {text}
+      </Text>
     </Pressable>
   );
 };

@@ -23,13 +23,6 @@ export const styles = StyleSheet.create({
     elevation: 5, // estimation for android
   },
   title: {
-    fontFamily: 'ProximaNovaA-Regular',
-    fontWeight: 'bold',
-    fontSize: 18,
-    fontStyle: 'normal',
-    lineHeight: 22,
-    letterSpacing: 0,
-    color: theme.colors.GREYISH_BROWN,
     flex: 1,
   },
   optionsContainer: {

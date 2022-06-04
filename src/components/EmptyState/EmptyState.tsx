@@ -1,6 +1,7 @@
-import { View, Text, ViewProps } from 'react-native';
+import { View, ViewProps } from 'react-native';
 import React from 'react';
 import styles from './EmptyState.styles';
+import Text from '../Text';
 
 interface Props {
   style?: ViewProps['style'];
@@ -12,7 +13,9 @@ const EmptyState = ({
 }: Props) => {
   return (
     <View style={[styles.container, style]}>
-      <Text style={styles.message}>{message}</Text>
+      <Text color="primary" preset="bold-18-22" style={styles.message}>
+        {message}
+      </Text>
     </View>
   );
 };

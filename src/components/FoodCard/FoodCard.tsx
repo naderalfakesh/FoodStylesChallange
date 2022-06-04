@@ -1,6 +1,7 @@
-import { View, Text, ViewProps, Image, Pressable } from 'react-native';
+import { View, ViewProps, Image, Pressable } from 'react-native';
 import React from 'react';
 import { styles } from './FoodCard.styles';
+import Text from '../Text';
 
 interface Props {
   style?: ViewProps['style'];
@@ -20,7 +21,9 @@ const FoodCard = ({
       : require('../../../assets/icons/close.png');
   return (
     <View style={[styles.container, style]}>
-      <Text style={styles.title}>{title}</Text>
+      <Text color="primary" preset="bold-18-22" style={styles.title}>
+        {title}
+      </Text>
       <Pressable
         style={({ pressed }) => [
           styles.optionsContainer,

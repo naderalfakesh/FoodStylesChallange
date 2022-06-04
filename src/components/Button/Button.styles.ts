@@ -25,14 +25,6 @@ const styles = StyleSheet.create({
   disabled: {
     backgroundColor: theme.colors.GREYISH_40,
   },
-  text: {
-    fontFamily: 'ProximaNovaA-Regular',
-    fontSize: 18,
-    fontWeight: 'bold',
-    fontStyle: 'normal',
-    letterSpacing: 0,
-    color: theme.colors.GREYISH_BROWN,
-  },
   image: {
     width: 20,
     height: 20,
