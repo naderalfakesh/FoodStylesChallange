@@ -18,10 +18,10 @@ const cardsSlice = createSlice({
     },
     deleteCard: (state, action: PayloadAction<{ id: string }>) => {
       if (state.list) {
-        const cardIndex = state.list.findIndex(
-          item => item.id === action.payload.id,
+        const newList = state.list.filter(
+          item => item.id !== action.payload.id,
         );
-        state.list.splice(cardIndex, 1);
+        return { ...state, list: newList };
       }
     },
   },
