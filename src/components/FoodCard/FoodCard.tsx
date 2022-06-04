@@ -6,8 +6,18 @@ interface Props {
   style?: ViewProps['style'];
   title: string;
   onOptionsPress: () => void;
+  type?: 'options' | 'close';
 }
-const FoodCard = ({ style, title, onOptionsPress }: Props) => {
+const FoodCard = ({
+  style,
+  title,
+  onOptionsPress,
+  type = 'options',
+}: Props) => {
+  const icon =
+    type === 'options'
+      ? require('../../../assets/icons/options.png')
+      : require('../../../assets/icons/close.png');
   return (
     <View style={[styles.container, style]}>
       <Text style={styles.title}>{title}</Text>
@@ -17,10 +27,7 @@ const FoodCard = ({ style, title, onOptionsPress }: Props) => {
           pressed && styles.pressed,
         ]}
         onPress={onOptionsPress}>
-        <Image
-          style={styles.options}
-          source={require('../../../assets/icons/options.png')}
-        />
+        <Image style={styles.options} source={icon} />
       </Pressable>
     </View>
   );

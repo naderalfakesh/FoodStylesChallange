@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FoodStylesChallangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodStylesChallangeTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-FoodStylesChallange.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-FoodStylesChallange.a */; };
+		0F54AE9BE6D14483BBCF176D /* ProximaNovaACond-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E800FDD56DB043859A27DCDC /* ProximaNovaACond-Semibold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		63507943D05746BCAD859792 /* ProximaNovaA-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22AE85B6D0BD4BF68AE9AB6E /* ProximaNovaA-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-FoodStylesChallange-FoodStylesChallangeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-FoodStylesChallange-FoodStylesChallangeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DACF7073C8DA4CE689329ECC /* ProximaNovaA-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913119F35B594B8BA3E3B1EB /* ProximaNovaA-Bold.ttf */; };
-		63507943D05746BCAD859792 /* ProximaNovaA-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22AE85B6D0BD4BF68AE9AB6E /* ProximaNovaA-Regular.ttf */; };
 		90898AA68835407691EFA76A /* ProximaNovaA-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAD79FF43B543D89F3E45F7 /* ProximaNovaA-Semibold.ttf */; };
-		0F54AE9BE6D14483BBCF176D /* ProximaNovaACond-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E800FDD56DB043859A27DCDC /* ProximaNovaACond-Semibold.ttf */; };
+		DACF7073C8DA4CE689329ECC /* ProximaNovaA-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913119F35B594B8BA3E3B1EB /* ProximaNovaA-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,17 +41,17 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FoodStylesChallange/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FoodStylesChallange/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-FoodStylesChallange-FoodStylesChallangeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodStylesChallange-FoodStylesChallangeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22AE85B6D0BD4BF68AE9AB6E /* ProximaNovaA-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaA-Regular.ttf"; path = "../assets/fonts/ProximaNovaA-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-FoodStylesChallange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodStylesChallange.debug.xcconfig"; path = "Target Support Files/Pods-FoodStylesChallange/Pods-FoodStylesChallange.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-FoodStylesChallange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodStylesChallange.release.xcconfig"; path = "Target Support Files/Pods-FoodStylesChallange/Pods-FoodStylesChallange.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-FoodStylesChallange-FoodStylesChallangeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodStylesChallange-FoodStylesChallangeTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodStylesChallange-FoodStylesChallangeTests/Pods-FoodStylesChallange-FoodStylesChallangeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-FoodStylesChallange.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodStylesChallange.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EAD79FF43B543D89F3E45F7 /* ProximaNovaA-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaA-Semibold.ttf"; path = "../assets/fonts/ProximaNovaA-Semibold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FoodStylesChallange/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-FoodStylesChallange-FoodStylesChallangeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodStylesChallange-FoodStylesChallangeTests.release.xcconfig"; path = "Target Support Files/Pods-FoodStylesChallange-FoodStylesChallangeTests/Pods-FoodStylesChallange-FoodStylesChallangeTests.release.xcconfig"; sourceTree = "<group>"; };
+		913119F35B594B8BA3E3B1EB /* ProximaNovaA-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaA-Bold.ttf"; path = "../assets/fonts/ProximaNovaA-Bold.ttf"; sourceTree = "<group>"; };
+		E800FDD56DB043859A27DCDC /* ProximaNovaACond-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaACond-Semibold.ttf"; path = "../assets/fonts/ProximaNovaACond-Semibold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		913119F35B594B8BA3E3B1EB /* ProximaNovaA-Bold.ttf */ = {isa = PBXFileReference; name = "ProximaNovaA-Bold.ttf"; path = "../assets/fonts/ProximaNovaA-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		22AE85B6D0BD4BF68AE9AB6E /* ProximaNovaA-Regular.ttf */ = {isa = PBXFileReference; name = "ProximaNovaA-Regular.ttf"; path = "../assets/fonts/ProximaNovaA-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6EAD79FF43B543D89F3E45F7 /* ProximaNovaA-Semibold.ttf */ = {isa = PBXFileReference; name = "ProximaNovaA-Semibold.ttf"; path = "../assets/fonts/ProximaNovaA-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E800FDD56DB043859A27DCDC /* ProximaNovaACond-Semibold.ttf */ = {isa = PBXFileReference; name = "ProximaNovaACond-Semibold.ttf"; path = "../assets/fonts/ProximaNovaACond-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

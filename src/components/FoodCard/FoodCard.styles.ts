@@ -23,7 +23,8 @@ export const styles = StyleSheet.create({
     elevation: 5, // estimation for android
   },
   title: {
-    fontFamily: 'ProximaNovaA-Bold',
+    fontFamily: 'ProximaNovaA-Regular',
+    fontWeight: 'bold',
     fontSize: 18,
     fontStyle: 'normal',
     lineHeight: 22,

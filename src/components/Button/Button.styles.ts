@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.GREYISH_40,
   },
   text: {
-    fontFamily: 'ProximaNovaA-Bold',
+    fontFamily: 'ProximaNovaA-Regular',
     fontSize: 18,
     fontWeight: 'bold',
     fontStyle: 'normal',
