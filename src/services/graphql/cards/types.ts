@@ -5,3 +5,5 @@ export type GetResponse = { cards: Card[] };
 export type CreateResponse = { createCard: Card };
 
 export type DuplicateResponse = { duplicateCard: Card };
+
+export type ShareResponse = { shareCard: string };

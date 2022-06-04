@@ -6,7 +6,12 @@ import {
   SHARE_CARD,
 } from './mutations';
 import { GET_CARDS } from './queries';
-import { CreateResponse, DuplicateResponse, GetResponse } from './types';
+import {
+  CreateResponse,
+  DuplicateResponse,
+  GetResponse,
+  ShareResponse,
+} from './types';
 
 const get = () =>
   client.query<GetResponse>({
@@ -18,9 +23,10 @@ const create = () =>
     mutation: CREAT_CARD,
   });
 
-const share = () =>
-  client.mutate<void>({
+const share = (id: string) =>
+  client.mutate<ShareResponse>({
     mutation: SHARE_CARD,
+    variables: { id },
   });
 
 const duplicate = (id: string) =>

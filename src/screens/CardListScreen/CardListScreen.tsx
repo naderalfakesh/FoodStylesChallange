@@ -4,6 +4,7 @@ import { Alert, Image } from 'react-native';
 import { Screen } from '../../components';
 import ErrorState from '../../components/ErrorState';
 import useCardList from '../../hooks/useCards';
+import useShare from '../../hooks/useShare';
 import { Card } from '../../models/card';
 import CardList from './CardList';
 import { styles } from './CardListScreen.styles';
@@ -25,6 +26,8 @@ const CardListScreen = () => {
     deleteCard,
   } = useCardList();
 
+  const { shareCard } = useShare();
+
   const [selectedItem, setSelectedItem] = useState<Card | null>(null);
 
   const handleActions = async (action: Action) => {
@@ -33,11 +36,12 @@ const CardListScreen = () => {
     }
     try {
       switch (action) {
-        case 'duplicate':
+        case 'duplicate': {
           await duplicateCard(selectedItem.id);
           setSelectedItem(null);
           break;
-        case 'delete':
+        }
+        case 'delete': {
           Alert.alert(
             'Confirm delete',
             'This will delete the Food Style and all its settings.',
@@ -54,9 +58,15 @@ const CardListScreen = () => {
             ],
           );
           break;
+        }
+        case 'share': {
+          await shareCard(selectedItem);
+          break;
+        }
       }
     } catch (err) {}
   };
+
   return (
     <Screen>
       <Image style={styles.logo} source={logo} />

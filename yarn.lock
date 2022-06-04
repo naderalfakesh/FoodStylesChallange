@@ -5843,6 +5843,11 @@ react-native-safe-area-context@^4.2.5:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.2.5.tgz#23006dc1a398bb825d7d795c27f1c46119efe8a5"
   integrity sha512-nUil2de1gk/8ZB9IzIxFyGCiKeAYcHzJb/Tks2NzSkev1qH4MNR05DWYDSmW6vLT+y4mospLVyG/H5dyUd+KQQ==
 
+react-native-share@^7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-7.5.0.tgz#888c4ee14c428109ce345ceae9ffedf39aefc4e1"
+  integrity sha512-0O88MSVpPbc0pNYCTk91qZgh4DzeFR0zFVEXPm1zy9qqdyHd3rbaKS15BJ6s0BmXe2Yz9BmyRbxxP5wqjMvZKg==
+
 react-native@0.68.2:
   version "0.68.2"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.68.2.tgz#07547cd31bb9335a7fa4135cfbdc24e067142585"
