@@ -1,13 +1,10 @@
 import React from 'react';
 import { FlatList, FlatListProps } from 'react-native';
 import FoodCard from '../../../components/FoodCard';
+import { Card } from '../../../models/card';
 
 import { styles } from './CardList.styles';
 
-type Card = {
-  id: string;
-  name: string;
-};
 interface Props {
   style?: FlatListProps<Card>['contentContainerStyle'];
   list: Card[];

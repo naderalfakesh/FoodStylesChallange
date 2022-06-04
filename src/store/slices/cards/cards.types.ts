@@ -1,9 +1,7 @@
+import { Card } from '../../../models/card';
+
 export type InitialState = {
   loading: boolean;
-  data?: any;
+  list?: Card[];
   error?: any;
-};
-
-export type FetchAllParams = {
-  id: string;
 };

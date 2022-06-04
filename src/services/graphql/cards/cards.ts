@@ -6,15 +6,15 @@ import {
   SHARE_CARD,
 } from './mutations';
 import { GET_CARDS } from './queries';
-import { Card } from './types';
+import { CreateResponse, DuplicateResponse, GetResponse } from './types';
 
 const get = () =>
-  client.query<Card[]>({
+  client.query<GetResponse>({
     query: GET_CARDS,
   });
 
 const create = () =>
-  client.mutate<Card>({
+  client.mutate<CreateResponse>({
     mutation: CREAT_CARD,
   });
 
@@ -24,7 +24,7 @@ const share = () =>
   });
 
 const duplicate = () =>
-  client.mutate<Card>({
+  client.mutate<DuplicateResponse>({
     mutation: DUPLICATE_CARD,
   });
 
