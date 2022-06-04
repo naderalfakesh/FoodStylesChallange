@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Alert, Image } from 'react-native';
-
-import { Screen } from '../../components';
-import ErrorState from '../../components/ErrorState';
+import { Screen, ErrorState } from '../../components';
 import useCardList from '../../hooks/useCards';
 import useShare from '../../hooks/useShare';
 import { Card } from '../../models/card';

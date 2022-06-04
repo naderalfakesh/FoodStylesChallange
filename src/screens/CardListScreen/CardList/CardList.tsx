@@ -1,8 +1,6 @@
 import React from 'react';
 import { FlatList, FlatListProps } from 'react-native';
-import EmptyState from '../../../components/EmptyState';
-import FoodCard from '../../../components/FoodCard';
-import LoadingState from '../../../components/LoadingState';
+import { EmptyState, FoodCard, LoadingState } from '../../../components';
 import { Card } from '../../../models/card';
 
 import { styles } from './CardList.styles';

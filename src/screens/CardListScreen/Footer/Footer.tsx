@@ -2,7 +2,7 @@ import { View, ViewProps } from 'react-native';
 import React from 'react';
 import styles, { FOOTER_HEIGHT, UNDERLAY_HEIGHT } from './Footer.styles';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import Button from '../../../components/Button';
+import { Button } from '../../../components';
 
 const addIcon = require('../../../../assets/icons/add.png');
 interface Props {

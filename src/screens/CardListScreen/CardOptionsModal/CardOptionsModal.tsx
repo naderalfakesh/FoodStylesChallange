@@ -1,10 +1,12 @@
 import { Animated } from 'react-native';
 import React, { useEffect, useRef } from 'react';
-import BlurryModal from '../../../components/BluryModal';
-import FoodCard from '../../../components/FoodCard';
-import ActionButton from '../../../components/ActionButton';
+import {
+  BlurryModal,
+  FoodCard,
+  ActionButton,
+  LoadingState,
+} from '../../../components';
 import styles from './CardOptionsModal.styles';
-import LoadingState from '../../../components/LoadingState';
 
 const shareIcon = require('../../../../assets/icons/share.png');
 const duplicateIcon = require('../../../../assets/icons/duplicate.png');
