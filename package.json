@@ -8,6 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write \"src/**/*.ts{,x}\"",
     "pod": "pod --project-directory=ios",
     "preinstall": "bundle install",
     "postinstall": "yarn pod install"

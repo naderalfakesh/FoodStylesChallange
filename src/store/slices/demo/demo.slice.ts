@@ -1,8 +1,8 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {fetchAll} from './demo.thunks';
-import {InitialState} from './demo.types';
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchAll } from './demo.thunks';
+import { InitialState } from './demo.types';
 
-const initialState: InitialState = {loading: false};
+const initialState: InitialState = { loading: false };
 
 const demoSlice = createSlice({
   name: 'demo',
@@ -26,7 +26,7 @@ const demoSlice = createSlice({
   },
 });
 
-const {actions, reducer} = demoSlice;
+const { actions, reducer } = demoSlice;
 
-export const {demo} = actions;
-export {reducer as demoReducer};
+export const { demo } = actions;
+export { reducer as demoReducer };

@@ -1,10 +1,10 @@
-import {createAsyncThunk} from '@reduxjs/toolkit';
-import {demo} from './demo.slice';
-import {FetchAllParams} from './demo.types';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { demo } from './demo.slice';
+import { FetchAllParams } from './demo.types';
 
 export const fetchAll = createAsyncThunk(
   'demo/fetchAll',
-  async (params: FetchAllParams, {getState, dispatch, rejectWithValue}) => {
+  async (params: FetchAllParams, { getState, dispatch, rejectWithValue }) => {
     try {
       console.log(params);
       const state = getState();
