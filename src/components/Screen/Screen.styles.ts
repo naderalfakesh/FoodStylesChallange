@@ -6,13 +6,14 @@ export const GRADIENT_OFFSET = 79;
 
 export const styles = StyleSheet.create({
   container: { flexGrow: 1, backgroundColor: theme.colors.BACKGROUND_GRAY },
-  gradient: { height: 157 },
+  gradient: { position: 'absolute', top: 0, left: 0, right: 0 },
   secondaryGradient: {
     position: 'absolute',
     left: 0,
     right: 0,
     bottom: -1,
   },
+  safeArea: { flex: 1 },
 });
 
 export const gradientColors = [theme.colors.ORANGISH, theme.colors.MAIZE];

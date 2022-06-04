@@ -8,7 +8,10 @@ import {
   styles,
 } from './Screen.styles';
 import LinearGradient from 'react-native-linear-gradient';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 interface Props {
   style?: ViewProps['style'];
@@ -19,7 +22,10 @@ const Screen: FC<Props> = ({ style, children }) => {
   return (
     <View style={[styles.container, style]}>
       <LinearGradient
-        style={[{ height: GRADIENT_HEIGHT + top, paddingTop: top }]}
+        style={[
+          styles.gradient,
+          { height: GRADIENT_HEIGHT + top, paddingTop: top },
+        ]}
         colors={gradientColors}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}>
@@ -28,8 +34,10 @@ const Screen: FC<Props> = ({ style, children }) => {
           colors={secondaryGradientColors}
           locations={[0, 0.26, 0.83, 1]}
         />
-        {children}
       </LinearGradient>
+      <SafeAreaView edges={['top']} style={styles.safeArea}>
+        {children}
+      </SafeAreaView>
     </View>
   );
 };
